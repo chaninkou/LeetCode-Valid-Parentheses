@@ -26,4 +26,27 @@ public class CheckValidParentheses {
 		// If stack is empty that means its valid parenthese
 		return stack.isEmpty();
 	}
+	
+	// Another way with switch statement instead of if statement
+	public boolean isValid(String s){
+		Stack<Character> stack = new Stack();
+		
+		// But in this case, there might be value that is not the given symbols
+		for(char w : s.toCharArray()){
+			switch(w){
+				case '}' : if(stack.isEmpty() || stack.pop() != '{'){
+					return false;
+				}
+				case ']' : if(stack.isEmpty() || stack.pop() != '['){
+					return false;
+				}
+				case ')' : if(stack.isEmpty() || stack.pop() != '('){
+					return false;
+				}
+				default: stack.push(w);
+			}
+		}
+		
+		return stack.isEmpty();
+	}
 }
