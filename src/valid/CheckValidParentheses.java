@@ -28,7 +28,7 @@ public class CheckValidParentheses {
 	}
 	
 	// Another way with switch statement instead of if statement
-	public boolean isValid(String s){
+	public boolean isValid2(String s){
 		Stack<Character> stack = new Stack();
 		
 		// But in this case, there might be value that is not the given symbols
