@@ -19,6 +19,7 @@ public class CheckValidParentheses {
 			} else if (stack.isEmpty() || stack.pop() != w) { // stack.pop() will occur in if statement too
 				// if its empty, that means it was not [, ( or }
 				// Second statement will check if if its valid
+				// Could also use peek() to see if its there first, that way we only need else statement to return false
 				return false;
 			}
 		}
@@ -27,7 +28,7 @@ public class CheckValidParentheses {
 		return stack.isEmpty();
 	}
 	
-	// Another way with switch statement instead of if statement
+	// Another way with switch case instead of if statement
 	public boolean isValid2(String s){
 		Stack<Character> stack = new Stack();
 		
