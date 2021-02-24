@@ -3,6 +3,7 @@ package leetcode20;
 import java.util.Stack;
 
 public class CheckValidParentheses {
+	// o(n) time
 	public boolean isValid(String s) {
 		// FILO
 		Stack<Character> stack = new Stack();
